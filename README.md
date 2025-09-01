@@ -1,62 +1,50 @@
-# Sujet TD 1
+# R111
 
+## Bonnes pratiques CSS globales
 
-## Exercice 1:
+### Points généraux
 
-### Navigateur par defaut: Firefox
+- Opter pour des tailles de polices fluides (de préférence en rem), éviter les tailles de police de taille fixe (px ou pt) car inaccessible aux personnes nécessitant d’agrandir les contenus textuels.
+- Éviter d’écraser une règle par une autre.
+- La règle `!important` doit être éradiquée si possible du fait de son poids extrêmement important (certaines parties des styles peuvent toutefois exceptionnellement employer à juste titre `!important`).
+- Durant la phase de développement l'intégration se fait sur plusieurs fichiers CSS (composants, layout, etc.) que l'on rassemble (@import) dans un fichier unique.
+- Les fichiers CSS doivent être minifiés pour économiser du poids de chargement.
+- Toujours préciser quelle(s) propriété(s) doit être animée dans une transition ou animation.
+- Éviter d’animer des propriétés autres que transform ou opacity ou filter (ou alors ajouter la propriété will-change au cas par cas).
 
-Modifier votre navigateur par défaut dans Windows :
-- Sélectionnez Démarrer > Paramètres > Applications > applications par défaut. Ouvrir les applications par défaut.
-- Sélectionnez **Firefox**.
-- En regard de Définir **Firefox** comme navigateur par défaut, sélectionnez Définir par défaut.
+**Remarque sur l'ordre des déclarations**
+Les déclarations au sein d'une règle CSS sont ordonnées de façon à faire apparaître les propriétés importantes en tête de liste.
 
-### VisualCode
-- Créer un répertoire TD1 sur le bureau.
-- Ouvrir 'Visual Studio Code' et ouvrir votre dossier 'Td1'.
-- Installer l'extension ['Live server'](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) : 
-- Installer l'extension ['Prettier'](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) :
+Voici l'ordre dans lequel nous déclarons nos propriétés :
 
-### Html
+- **Propriété display** : tout ce qui affecte le rendu par défaut de l’élément
+- **Positionnement** : tout ce qui détermine la position de l’élément
+- **Modèle de boîte** : tout ce qui influe sur les dimensions de l’élément
+- **Typographie** : tout ce qui détermine les caractéristiques de la police de caractères
+- **Effets Viusels & Graphiques**
+- **Transformations et transitions**
 
-- Créer un fichier `index.html`, celui-ci est vide.
+La démarche de réordonnement est manuelle, en se servant de cette liste comme référence.
 
-- Emmet (plugin intégré à VSCode), est un outil permettant de simplifier l'écriture du HTML et du CSS.
-- Initialiser votre page HTML avec le raccourci [! + tabulation] :
-vous obtenez la **structure minimale** d'une page HTML
+Ref
+[Alsacreation](https://github.com/alsacreations/guidelines/blob/master/Guidelines-CSS.md)
+
+https://www.alsacreations.com/outils/guidelines/Guidelines-CSS.md
+[CUBE]()
+
+## Outils
+
+### Place Holder
+
+- http://picsum.photos
+- https://www.pexels.com
+- https://i.pravatar.cc/{size}
+- http://lorempixel.com/400/200
+- https://doodleipsum.com/
+- https://logoipsum.com/
+
+Exemple d'utilisation
 
 ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-
-    </body>
-    </html>
+https://picsum.photos/480/320/?random
 ```
-- Utiliser une balise `<h1>` (Titre de niveau 1) et écrire "HELLO HTML".
-- Utiliser une balise `<p>` (paragraphe) et écrire "CSS is AWESOME".
-- Utiliser une balise `<img>` (image) et ajouter une image de votre choix.
-
-- [Clic droit] sur votre fichier html > Sélectionner : **Open with Live Server**. 
-- Votre page doit s'ouvrir dans le navigateur par défaut ici Firefox.
-
-- Ouvrir l'inspecteur d'élément : [Clic droit] sur la page > **Inspecteur d'élément**.
-
-### CSS
-
-- Ajouter un dossier nommé 'css' à votre répertoire 'Td1', puis un fichier 'style.css'.
-- Lier votre fichier 'index.html' et votre fichier 'style.css' avec la balise `link` (cf CM).
-- Regarder sur MDN la propriété `color` et `background-color` et les appliquer à votre page.
-- Regarder sur MDN la propriété `font-family` et l'appliquer une police sans serif à votre page.
-
-
-
-### Liens utiles :
-
-- [MDN](https://developer.mozilla.org/fr/)
-- [Wev.dev](https://web.dev/learn/)
