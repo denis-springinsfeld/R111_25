@@ -10,7 +10,7 @@ Modifier votre navigateur par défaut dans Windows :
 
 ## VisualCode
 
-- Créer un répertoire TD1 sur le bureau.
+- Renommer le dossier `start` en `TD1` .
 - Ouvrir 'Visual Studio Code' et ouvrir votre dossier 'Td1'.
 - Installer l'extension ['Live server'](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) :
 - Installer l'extension ['Prettier'](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) :
